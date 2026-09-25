@@ -73,7 +73,7 @@ def animate_transformation(v_initials, matrices, colors=None):
 
     # Dynamically scale width based on the number of vectors
     fig_width = max(5 * num_vectors, 6)
-    fig = plt.figure(figsize=(fig_width, 5.5))
+    fig = plt.figure(figsize=(fig_width, 5.5), num='Bloch Sphere Animation')
     plt.subplots_adjust(bottom=0.25, wspace=0.1) 
     
     # Generate subplots dynamically
@@ -138,7 +138,7 @@ def animate_transformation(v_initials, matrices, colors=None):
             ax.set_ylim([-lim, lim])
             ax.set_zlim([-lim, lim])
             ax.set_box_aspect([1, 1, 1])
-            ax.set_title(f'Vector {i+1}', pad=0)
+            ax.set_title(f'X Gate Example')
 
         # State management (runs once per frame, not per vector)
         if state['is_playing']:
